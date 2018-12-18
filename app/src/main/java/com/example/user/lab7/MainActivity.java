@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                                 age.setText(String.valueOf(ageCalculated));
                                 age.clearFocus(); //usuniecie focusu z pola tekstowego, zeby po ponowym kliknieciu pojawiło się znowu wybieranie daty
                             } else{
-                                age.setText("Niepoprawna data");
+                                age.setText(getString(R.string.invalidTxt));
                                 age.clearFocus();
                             }
                         }

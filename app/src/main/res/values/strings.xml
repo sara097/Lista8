@@ -10,6 +10,7 @@
     <string name="ageTxt">Wiek:</string>
     <string name="ageHint">wiek</string>
     <string name="wayTxt">Wybierz sposób obliczania PPM</string>
+    <string name="invalidTxt">Niepoprawna data</string>
     <string-array name="heightUnits">
         <item>cm</item>
         <item>m</item>
