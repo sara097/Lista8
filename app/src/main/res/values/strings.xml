@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="button_txt">Oblicz</string>
+    <string name="weightTxt">Podaj wagę:</string>
+    <string name="heightTxt">Podaj wzrost:</string>
+    <string name="sexTxt">Podaj płeć:</string>
+    <string name="weightHint">waga</string>
+    <string name="heightHint">wzrost</string>
+    <string name="unitsTxt">Wzrost w:</string>
+    <string name="ageTxt">Wiek:</string>
+    <string name="ageHint">wiek</string>
+    <string name="wayTxt">Wybierz sposób obliczania PPM</string>
+    <string-array name="heightUnits">
+        <item>cm</item>
+        <item>m</item>
+    </string-array>
+    <string-array name="sexChoose">
+        <item>kobieta</item>
+        <item>mężczyzna</item>
+    </string-array>
+    <string-array name="wayPPM">
+        <item>Benedict-Harris</item>
+        <item>Mifflin</item>
+    </string-array>
+</resources>
