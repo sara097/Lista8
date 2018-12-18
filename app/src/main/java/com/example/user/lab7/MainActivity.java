@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     }, mYear, mMonth, mDay);
-                    datePicker.setTitle("Select date of birth"); //tytuł date pickera
+                    datePicker.setTitle("Wybierz datę urodzin:"); //tytuł date pickera
                     datePicker.show(); //pokazanie date pickera
                 }
             }
