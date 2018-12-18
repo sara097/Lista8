@@ -95,29 +95,34 @@ public class MainActivity extends AppCompatActivity {
         String units = String.valueOf(unitsSpinner.getSelectedItem());
         int way = waySpinner.getSelectedItemPosition();
 
-        //blok try i catch wyrzucający wyjątek, gdy wprowadzone dane nie sa numeryczne
-        try {
-            //zmienne pomocnicze do obliczeń
-            double weight2 = Double.valueOf(weight.getText().toString());
-            double height2 = Double.valueOf(height.getText().toString());
-            double age2 = Double.valueOf(age.getText().toString());
-            //utworzenie obiektu klasy PPM
-            PPM ppm = new PPM();
-            double result = 0; //wynik do wyświetlenia
+        //sprawdzanie czy wzrost i waga nie są mniejsze lub równe zero i jesli są to ustawienie odpowiedniego komunikatu
+        if(Double.valueOf(weight.getText().toString())<=0||Double.valueOf(height.getText().toString())<=0){
+            ans.setText(getString(R.string.invalidNumTxt));
+        }else {
+            //blok try i catch wyrzucający wyjątek, gdy wprowadzone dane nie sa numeryczne
+            try {
+                //zmienne pomocnicze do obliczeń
+                double weight2 = Double.valueOf(weight.getText().toString());
+                double height2 = Double.valueOf(height.getText().toString());
+                double age2 = Double.valueOf(age.getText().toString());
+                //utworzenie obiektu klasy PPM
+                PPM ppm = new PPM();
+                double result = 0; //wynik do wyświetlenia
 
-            //w zalezności od indeksu wybranego elementu ze spinnera ze sposobem wywołana jest odpowiednia metoda z klasy PPM
-            if (way == 0) {
-                result = ppm.PPM_BH(sex, weight2, height2, age2, units);
-                ans.setText(getString(R.string.BHTxt) + String.valueOf(result));
-            } else {
-                result = ppm.PPM_M(sex, weight2, height2, age2, units);
-                ans.setText(getString(R.string.MTxt) + String.valueOf(result));
+                //w zalezności od indeksu wybranego elementu ze spinnera ze sposobem wywołana jest odpowiednia metoda z klasy PPM
+                if (way == 0) {
+                    result = ppm.PPM_BH(sex, weight2, height2, age2, units);
+                    ans.setText(getString(R.string.BHTxt) + String.valueOf(result));
+                } else {
+                    result = ppm.PPM_M(sex, weight2, height2, age2, units);
+                    ans.setText(getString(R.string.MTxt) + String.valueOf(result));
+                }
+
+            } catch (NumberFormatException e) {
+                //jesli złapany jest wyjątek to nic nie jest obliczane tylko wyświetlany jest komunikat.
+                ans.setText(getString(R.string.notNumberTxt));
+
             }
-
-        } catch (NumberFormatException e) {
-            //jesli złapany jest wyjątek to nic nie jest obliczane tylko wyświetlany jest komunikat.
-            ans.setText(getString(R.string.notNumberTxt));
-
         }
 
     }

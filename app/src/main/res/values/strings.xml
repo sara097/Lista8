@@ -15,6 +15,7 @@
     <string name="BHTxt">Benedict-Harris - PPM =</string>
     <string name="MTxt">Mifflin - PPM =</string>
     <string name="birthdateTxt">Wybierz datę urodzin:</string>
+    <string name="invalidNumTxt">Niepoprawny wzrost lub waga</string>
     <string-array name="heightUnits">
         <item>cm</item>
         <item>m</item>
