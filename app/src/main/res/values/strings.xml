@@ -11,6 +11,10 @@
     <string name="ageHint">wiek</string>
     <string name="wayTxt">Wybierz sposób obliczania PPM</string>
     <string name="invalidTxt">Niepoprawna data</string>
+    <string name="notNumberTxt">Co najmniej jedno z pól nie jest liczba</string>
+    <string name="BHTxt">Benedict-Harris - PPM =</string>
+    <string name="MTxt">Mifflin - PPM =</string>
+    <string name="birthdateTxt">Wybierz datę urodzin:</string>
     <string-array name="heightUnits">
         <item>cm</item>
         <item>m</item>

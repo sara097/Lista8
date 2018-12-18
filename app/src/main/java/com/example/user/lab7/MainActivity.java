@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     }, mYear, mMonth, mDay);
-                    datePicker.setTitle("Wybierz datę urodzin:"); //tytuł date pickera
+                    datePicker.setTitle(getString(R.string.birthdateTxt)); //tytuł date pickera
                     datePicker.show(); //pokazanie date pickera
                 }
             }
@@ -108,15 +108,15 @@ public class MainActivity extends AppCompatActivity {
             //w zalezności od indeksu wybranego elementu ze spinnera ze sposobem wywołana jest odpowiednia metoda z klasy PPM
             if (way == 0) {
                 result = ppm.PPM_BH(sex, weight2, height2, age2, units);
-                ans.setText(" Benedict-Harris - PPM = " + String.valueOf(result));
+                ans.setText(getString(R.string.BHTxt) + String.valueOf(result));
             } else {
                 result = ppm.PPM_M(sex, weight2, height2, age2, units);
-                ans.setText(" Mifflin - PPM = " + String.valueOf(result));
+                ans.setText(getString(R.string.MTxt) + String.valueOf(result));
             }
 
         } catch (NumberFormatException e) {
             //jesli złapany jest wyjątek to nic nie jest obliczane tylko wyświetlany jest komunikat.
-            ans.setText("Co najmniej jedno z pól nie jest liczba");
+            ans.setText(getString(R.string.notNumberTxt));
 
         }
 
